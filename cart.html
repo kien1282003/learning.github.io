@@ -159,9 +159,25 @@
 					<a href="product_ip11.html" class="cart__body-name-title">Iphone 11</a>
 				</div>
 				<div class="col-3 cart__body-quantity">
-                    <input type="button" value="-"  class="cart__body-quantity-minus">
-                    <input type="number" step="1" min="1" max="999" value="1" class="cart__body-quantity-total">
-                    <input type="button" value="+" class="cart__body-quantity-plus">
+                    <input onclick="decreaseValue()" type="button" value="-"  class="cart__body-quantity-minus">
+                    <input type="number" step="1" min="1" max="999" id="number" value="0" class="cart__body-quantity-total">
+                    <input onclick="increaseValue()" type="button" value="+" class="cart__body-quantity-plus">
+                    <script>
+                        function increaseValue() {
+                        var value = parseInt(document.getElementById('number').value, 10);
+                        value = isNaN(value) ? 0 : value;
+                        value++;
+                        document.getElementById('number').value = value;
+                        }
+    
+                        function decreaseValue() {
+                        var value = parseInt(document.getElementById('number').value, 10);
+                        value = isNaN(value) ? 0 : value;
+                        value < 1 ? value = 1 : '';
+                        value--;
+                        document.getElementById('number').value = value;
+                        }
+                    </script>
 				</div>
 				<div class="col-3 cart__body-price">
 					<span>11.090.000 VNĐ</span>
@@ -177,9 +193,25 @@
 					<a href="product_ip13mini.html" class="cart__body-name-title">Iphone 13 Mini</a>
 				</div>
 				<div class="col-3 cart__body-quantity">
-                    <input type="button" value="-"  class="cart__body-quantity-minus">
-                    <input type="number" step="1" min="1" max="999" value="2" class="cart__body-quantity-total">
-                    <input type="button" value="+" class="cart__body-quantity-plus">
+                    <input onclick="decreaseValu()" type="button" value="-"  class="cart__body-quantity-minus">
+                    <input type="number" step="1" min="1" max="999" id="number1" value="0" class="cart__body-quantity-total">
+                    <input onclick="increaseValu()" type="button" value="+" class="cart__body-quantity-plus">
+                    <script>
+                        function increaseValu() {
+                        var value = parseInt(document.getElementById('number1').value, 10);
+                        value = isNaN(value) ? 0 : value;
+                        value++;
+                        document.getElementById('number1').value = value;
+                        }
+    
+                        function decreaseValu() {
+                        var value = parseInt(document.getElementById('number1').value, 10);
+                        value = isNaN(value) ? 0 : value;
+                        value < 1 ? value = 1 : '';
+                        value--;
+                        document.getElementById('number1').value = value;
+                        }
+                    </script>
 				</div>
 				<div class="col-3 cart__body-price">
 					<span>21.990.000 VNĐ</span>
